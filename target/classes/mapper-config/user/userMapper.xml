@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+	  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+	  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="df.user.dao.IUserDao">  
+	<!--用户信息表(U_USER）映射-->
+	<resultMap id="user_result" type="df.user.domain.User">
+		<result property="id" column="USER_ID" jdbcType="INTEGER" />
+		<result property="userLogin" column="USER_LOGIN" jdbcType="VARCHAR" />
+		<result property="mobile" column="MOBILE" jdbcType="VARCHAR" />
+		<result property="userName" column="USER_NAME" jdbcType="VARCHAR" />
+		<result property="wxName" column="WX_NAME"  jdbcType="VARCHAR" />
+		<result property="unionid" column="UNIONID"  jdbcType="VARCHAR" />
+		<result property="icon" column="USER_ICON"  jdbcType="VARCHAR" />
+		<result property="userType" column="USER_TYPE"  jdbcType="VARCHAR" />
+		<result property="userSource" column="USER_SOURCE" jdbcType="CHAR" />
+		<result property="idType" column="ID_TYPE" jdbcType="CHAR" />
+		<result property="email" column="EMAIL" jdbcType="VARCHAR" />
+		<result property="sex" column="SEX"  jdbcType="CHAR" />
+		<result property="birthday" column="BIRTHDAY" jdbcType="VARCHAR" />
+		<result property="introduction" column="INTRODUCTION" jdbcType="VARCHAR" />
+		<result property="password" column="PASSWORD" jdbcType="VARCHAR" />
+		<result property="payPwd" column="PAY_PWD" jdbcType="VARCHAR" />
+		<result property="level" column="LEVEL" jdbcType="CHAR" />
+		<result property="wxSceneId" column="WX_SCENE_ID" jdbcType="VARCHAR" />
+		<result property="wxCodeImg" column="WX_CODE_IMG" jdbcType="VARCHAR" />
+		<result property="wxCodeUrl" column="WX_CODE_URL" jdbcType="VARCHAR" />	
+		<result property="specialty" column="SPECIALTY" jdbcType="VARCHAR" />
+		<result property="lng" column="LNG" jdbcType="VARCHAR" />	
+		<result property="lat" column="LAT" jdbcType="VARCHAR" />	
+		<result property="loginTime" column="LOGIN_TIME" jdbcType="DATE" />
+		<result property="createTime" column="CREATE_TIME" jdbcType="DATE" />	
+	</resultMap>
+
+	<select id="get" parameterType="java.lang.String"  resultMap="user_result">
+		SELECT * FROM U_USER U WHERE U.USER_ID =  #{id}
+	</select>
+
+	<select id="getAll" resultMap="user_result">
+		SELECT * FROM U_USER
+	</select>
+	
+	<select id="getByUserName" parameterType="java.lang.String" resultMap="user_result">
+		SELECT * FROM U_USER WHERE USER_NAME = #{userName}
+	</select>
+	
+	   
+</mapper>
