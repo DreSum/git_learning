@@ -13,5 +13,9 @@ git_learning_02
 
 =======
 
+<<<<<<< HEAD
 add by cmx 
+=======
+ad by cmx 
+>>>>>>> 13ee4ee9c33abe6af751329d38bb906c4e10966a
 >>>>>>> 7cefa6926814b6522bdb4c34f3ca7108e46745bd
