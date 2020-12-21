@@ -13,5 +13,5 @@ git_learning_02
 
 =======
 
-adding by cmx 
+add by cmx 
 >>>>>>> 7cefa6926814b6522bdb4c34f3ca7108e46745bd
