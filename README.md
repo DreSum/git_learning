@@ -5,8 +5,13 @@ adding bu ligan
 
 学习git操作20201217  pubic是只读操作授权给所有git用户
 
+<<<<<<< HEAD
 user ligan
 git_learning_02
 
 
 
+=======
+
+adding by cmx 
+>>>>>>> 7cefa6926814b6522bdb4c34f3ca7108e46745bd
